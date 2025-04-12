@@ -7,12 +7,12 @@
 CREATE TABLE "user" (
   "id" SERIAL PRIMARY KEY,
   "username" VARCHAR (20) UNIQUE NOT NULL,
-  "user_type" VARCHAR (10) NOT NULL,
+  "user_type" VARCHAR (10) NOT NULL
 );
 
 CREATE TABLE "poems" (
   "id" SERIAL PRIMARY KEY,
   "title" VARCHAR (100) NOT NULL,
   "author" VARCHAR (100) NOT NULL,
-  "poem" VARCHAR (100000) NOT NULL,
-)
+  "poem" TEXT NOT NULL
+);
