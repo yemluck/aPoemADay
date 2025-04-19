@@ -1,4 +1,5 @@
 import pool from "./lib/server/db";
+import Link from "next/link";
 
 export default async function Home() {
   const result = await pool.query(`SELECT * FROM "user"`);
@@ -6,9 +7,11 @@ export default async function Home() {
 
   return (
     <>
-      <button className="inline bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Admin
-      </button>
+      <Link href={"/admin"}>
+        <p className="inline bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Admin
+        </p>
+      </Link>
       <h2>this is the home page</h2>
 
       <ul>
