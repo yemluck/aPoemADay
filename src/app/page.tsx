@@ -15,6 +15,12 @@ export default async function Home() {
         </p>
       </Link>
 
+      <Link href={"/poems"}>
+        <p className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5 mt-3 w-xs">
+          Poems
+        </p>
+      </Link>
+
       <ul>
         {display.map((poem) => {
           return (
