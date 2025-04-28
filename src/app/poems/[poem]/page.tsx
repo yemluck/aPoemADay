@@ -2,7 +2,11 @@ import pool from "@/app/lib/server/db";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function PoemDetails({ params }) {
+export default async function PoemDetails({
+  params,
+}: {
+  params: { poem: string };
+}) {
   // console.log("this is the params", await params.poem);
 
   const { poem } = params;
